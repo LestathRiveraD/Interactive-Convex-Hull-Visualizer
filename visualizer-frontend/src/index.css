@@ -1,0 +1,19 @@
+:root {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #ededed;
+  background: #2f2f2f;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --muted: #a3a3a3;
+  --border: #333333;
+  --accent: #ededed;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 280px; }
+button { font: inherit; }
+button:focus-visible { outline: 3px solid #bdbdbd; outline-offset: 3px; }
+::selection { background: #505050; color: #fff; }

@@ -1,0 +1,18 @@
+.main {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.navBar {
+  padding: 7px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+}
+
+.app {
+  width: min(100% - 40px, 564px);
+  margin: 0 auto;
+  padding: 56px 0 28px;
+}

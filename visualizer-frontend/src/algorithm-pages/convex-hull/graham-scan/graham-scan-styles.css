@@ -1,0 +1,25 @@
+.panel {
+  padding: 14px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.geometry-canvas {
+  display: block;
+  width: 75%;
+  height: auto;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0 1px var(--border);
+  cursor: crosshair;
+  background-color: #fafafa;
+  margin: 14px;
+}
+.geometry-canvas.is-running { cursor: default; }
+
+.inside-panel {
+  display: flex;
+  flex-direction: column;
+}
