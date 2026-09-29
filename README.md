@@ -53,7 +53,7 @@ Run locally typing the following in your terminal:
 
 ```bash
 git clone https://github.com/LestathRiveraD/Interactive-Convex-Hull-Visualizer.git
-cd Interactive-Convex-Hull-Visualizer/
+cd Interactive-Convex-Hull-Visualizer/visualizer-frontend
 npm i
 npm run dev
 ```
