@@ -9,7 +9,7 @@ The Convex Hull algorithm takes as input a set of points and finds the smallest 
 
 This is an important algorithm in different areas such as image processing, route planning, and object modeling. It is also widely used in competitive programming.
 
-<img src="./public/hullDemonstration.png" height="200px">
+<img src="./assets/hullDemonstration.png" height="200px">
 
 
 ## Features
@@ -19,7 +19,7 @@ This is an important algorithm in different areas such as image processing, rout
 - User can see the algorithm step by step using the controllers below the board.
 - User can stop the simulation to provide a different set of points.
 
-<img src="./public/demonstration.gif" height="200px">
+<img src="./assets/demonstration.gif" height="200px">
 
 ## Architecture
 
