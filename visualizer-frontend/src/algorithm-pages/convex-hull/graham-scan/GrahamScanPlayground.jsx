@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import './graham-scan-styles.css'
-import convexHull from '../../../../../core-logic/convexHull'
+import convexHull from '../../../../../core-logic/convex-hull/graham-scan'
 
 function GrahamScanPlayground() {
     const canvasRef = useRef(null)

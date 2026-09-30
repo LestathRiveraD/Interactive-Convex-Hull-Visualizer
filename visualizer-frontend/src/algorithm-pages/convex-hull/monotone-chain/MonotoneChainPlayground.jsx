@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import './monotone-chain-styles.css'
-import convexHull from '../../../../../core-logic/convexHull'
+import convexHull from '../../../../../core-logic/convex-hull/monotone-chain'
 
 function MonotoneChainPlayground() {
     const canvasRef = useRef(null)
