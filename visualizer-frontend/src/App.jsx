@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './App.css'
 import Sidebar from './components/Sidebar';
 import GrahamScan from './algorithm-pages/convex-hull/graham-scan/GrahamScan'
+import MonotoneChain from './algorithm-pages/convex-hull/monotone-chain/MonotoneChain'
 
 function Home() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <Home /> } />
           <Route path='/graham-scan' element={ <GrahamScan /> } />
+          <Route path='/monotone-chain' element={ <MonotoneChain /> } />
         </Routes>
         <Sidebar />
       </div>
