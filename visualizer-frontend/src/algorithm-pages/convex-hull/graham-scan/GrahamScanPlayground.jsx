@@ -85,7 +85,7 @@ function GrahamScanPlayground() {
         const xCoord = Math.trunc((e.clientX - rect.left) * e.currentTarget.width / rect.width)
         const yCoord = Math.trunc((e.clientY - rect.top) * e.currentTarget.height / rect.height)
 
-        if (points.find(point => {point.x === xCoord && point.y === yCoord}))
+        if (points.find(point => {return point.x === xCoord && point.y === yCoord}))
             return
         setPoints([...points, { x: xCoord, y: yCoord }])
     }
