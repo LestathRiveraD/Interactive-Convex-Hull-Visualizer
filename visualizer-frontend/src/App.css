@@ -4,6 +4,11 @@
   margin-right: 10%;
 }
 
+.main > :first-child {
+  flex: 1;
+  min-width: 0;
+}
+
 .navBar {
   padding: 7px;
   margin-left: 10%;

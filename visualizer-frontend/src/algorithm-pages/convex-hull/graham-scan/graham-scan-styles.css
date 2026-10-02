@@ -9,13 +9,14 @@
 
 .geometry-canvas {
   display: block;
-  width: 75%;
+  width: 75vh;
   height: auto;
   aspect-ratio: 1;
   box-shadow: 0 0 0 1px var(--border);
   cursor: crosshair;
   background-color: #fafafa;
   margin: 14px;
+  max-width: 75%;
 }
 .geometry-canvas.is-running { cursor: default; }
 
