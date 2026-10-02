@@ -53,7 +53,8 @@ function convexHull(points) {
     let history = []
     for (var i = 0; i < points.length; i++)
     {
-        history.push([...stack])
+        if (stack.length > 0)   
+            history.push([...stack])
         while (stack.length > 1 && orientation(stack[stack.length - 2], stack[stack.length - 1], points[i]) < 0)
         {
             history.push([...stack, points[i]])
