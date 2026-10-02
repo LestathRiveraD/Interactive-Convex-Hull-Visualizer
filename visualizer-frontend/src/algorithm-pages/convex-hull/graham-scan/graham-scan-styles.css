@@ -5,12 +5,22 @@
   background-color: #1d1d1d;
 }
 
+.textInsideContainer {
+  width: fit-content;
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
 .container {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 300px;
   width: 55vw;
   max-width: 100%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   gap: 0;
   border: 1px solid var(--border);
   border-radius: 8px;
