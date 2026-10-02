@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import './graham-scan-styles.css'
 import convexHull from '../../../../../core-logic/convexHull'
+import PlaybackIcon from '../../../components/PlaybackIcon'
 
 function GrahamScanPlayground() {
     const canvasRef = useRef(null)
@@ -143,14 +144,26 @@ function GrahamScanPlayground() {
                     <div>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </div>
-                    <div>
-                        <button onClick={handleStart}>Start</button>
-                        <button onClick={handleBack}>Back</button>
-                        <button onClick={drawHull}>Start</button>
-                        <button onClick={handleNext}>Next</button>
-                        <button onClick={handleEnd}>End</button>
+                    <div className="playback-controls">
+                        <button type="button" onClick={handleStart} aria-label="Go to first step" title="Go to first step">
+                            <PlaybackIcon name="backward-fast" />
+                        </button>
+                        <button type="button" onClick={handleBack} aria-label="Previous step" title="Previous step">
+                            <PlaybackIcon name="backward-step" />
+                        </button>
+                        <button type="button" onClick={drawHull} aria-label="Start simulation" title="Start simulation">
+                            <PlaybackIcon name="play" />
+                        </button>
+                        <button type="button" onClick={handleNext} aria-label="Next step" title="Next step">
+                            <PlaybackIcon name="forward-step" />
+                        </button>
+                        <button type="button" onClick={handleEnd} aria-label="Go to last step" title="Go to last step">
+                            <PlaybackIcon name="forward-fast" />
+                        </button>
                     </div>
-                    <button onClick={handleStop}>Stop</button>
+                    <button className="playback-stop" type="button" onClick={handleStop} aria-label="Stop simulation" title="Stop simulation">
+                        <PlaybackIcon name="stop" />
+                    </button>
                 </div>
             </div>
         </div>
