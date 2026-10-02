@@ -2,6 +2,7 @@
   display: flex;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 42px;
 }
 
 .main > :first-child {
@@ -10,9 +11,9 @@
 }
 
 .navBar {
+  background-color: #242424;
   padding: 7px;
-  margin-left: 10%;
-  margin-right: 10%;
+  padding-left: 10%;
   text-align: left;
 }
 

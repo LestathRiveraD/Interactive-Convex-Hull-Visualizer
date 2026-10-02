@@ -1,38 +1,47 @@
 .panel {
-  padding: 14px;
-  flex: 0 1 280px;
+  padding: 20px;
   min-width: 0;
+  border-left: 1px solid var(--border);
+  background-color: #1d1d1d;
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  width: 50vw;
+  max-width: 100%;
+  margin: 0 auto;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1d1d1d;
 }
 
 .geometry-canvas {
   display: block;
-  width: 75vh;
+  width: 100%;
   height: auto;
   aspect-ratio: 1;
-  box-shadow: 0 0 0 1px var(--border);
+  align-self: start;
   cursor: crosshair;
   background-color: #fafafa;
-  margin: 14px;
-  max-width: 75%;
+  margin: 0;
+  max-width: 100%;
 }
 .geometry-canvas.is-running { cursor: default; }
 
 .inside-panel {
   display: flex;
   flex-direction: column;
+  gap: 12px;
 }
 
 .playback-controls {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 6px;
-  margin-top: 12px;
+  margin: 0;
 }
 
 .playback-controls button,
@@ -46,7 +55,35 @@
   cursor: pointer;
 }
 
+.playback-controls button {
+  min-width: 0;
+  padding: 10px 0;
+}
+
 .playback-stop {
   align-self: flex-start;
-  margin-top: 6px;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: min(100%, 75vh);
+  }
+
+  .panel {
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+}
+
+@media (max-width: 600px) {
+  .panel {
+    padding: 12px;
+  }
+
+  .playback-controls {
+    gap: 4px;
+  }
 }
