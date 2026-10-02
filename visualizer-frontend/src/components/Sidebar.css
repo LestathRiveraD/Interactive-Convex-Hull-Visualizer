@@ -13,7 +13,7 @@
 }
 
 .sidebar-container.is-open {
-    flex-basis: 25%;
+    flex-basis: auto;
 }
 
 .sidebar {
