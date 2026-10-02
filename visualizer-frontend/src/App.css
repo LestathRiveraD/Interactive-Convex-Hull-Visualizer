@@ -11,10 +11,19 @@
 }
 
 .navBar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   background-color: #242424;
   padding: 7px;
   padding-left: 10%;
   text-align: left;
+}
+
+.navbar-logo {
+  display: block;
+  flex-shrink: 0;
+  
 }
 
 .app {

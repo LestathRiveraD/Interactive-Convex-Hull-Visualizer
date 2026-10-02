@@ -11,7 +11,7 @@ const sections = [
     {
         name: "Convex Hull Algorithms",
         children: [
-            ["Graham scan", "graham-scan/"],
+            ["Graham scan", "graham-scan"],
         ]
     },
 ];

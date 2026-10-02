@@ -11,6 +11,7 @@ function GrahamScanPlayground() {
     const [ points, setPoints ] = useState([])
     const [ simulation, setSimulation ] = useState(-1)
     const [ hull, setHull ] = useState([])
+    const isRunning = simulation >= 0
     
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -61,7 +62,6 @@ function GrahamScanPlayground() {
             ctx.fillStyle = "#171717"
 
             const curSimulationStep = hull[1][simulation]
-            // console.log(curSimulationStep)
 
             if (curSimulationStep.length >= 2)
             {
@@ -142,7 +142,8 @@ function GrahamScanPlayground() {
             <div className='panel'>
                 <div className="inside-panel">
                     <div>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <b>Graham-Scan Algorithm.</b><br/>
+                        Time complexity: O(n log n)
                     </div>
                     <div className="playback-controls">
                         <button type="button" onClick={handleStart} aria-label="Go to first step" title="Go to first step">
@@ -151,8 +152,13 @@ function GrahamScanPlayground() {
                         <button type="button" onClick={handleBack} aria-label="Previous step" title="Previous step">
                             <PlaybackIcon name="backward-step" />
                         </button>
-                        <button type="button" onClick={drawHull} aria-label="Start simulation" title="Start simulation">
-                            <PlaybackIcon name="play" />
+                        <button
+                            type="button"
+                            onClick={isRunning ? handleStop : drawHull}
+                            aria-label={isRunning ? 'Stop simulation' : 'Start simulation'}
+                            title={isRunning ? 'Stop simulation' : 'Start simulation'}
+                        >
+                            <PlaybackIcon name={isRunning ? 'stop' : 'play'} />
                         </button>
                         <button type="button" onClick={handleNext} aria-label="Next step" title="Next step">
                             <PlaybackIcon name="forward-step" />
@@ -161,9 +167,6 @@ function GrahamScanPlayground() {
                             <PlaybackIcon name="forward-fast" />
                         </button>
                     </div>
-                    <button className="playback-stop" type="button" onClick={handleStop} aria-label="Stop simulation" title="Stop simulation">
-                        <PlaybackIcon name="stop" />
-                    </button>
                 </div>
             </div>
         </div>

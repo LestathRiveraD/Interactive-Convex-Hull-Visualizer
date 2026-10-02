@@ -16,6 +16,7 @@ function App() {
   return (
     <BrowserRouter>
       <nav className='navBar'>
+        <img className="navbar-logo" src={`${import.meta.env.BASE_URL}favicon.svg`} alt="" width="70" height="70" />
         <h1>Convex-Hull Visualizer</h1>
       </nav>
       <div className='main'>
